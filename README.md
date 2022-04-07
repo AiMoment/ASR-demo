@@ -1,4 +1,4 @@
-<center> # ASR-demo </center>
+# ASR-demo
 > Qt 采集麦克风PCM数据
 
 ## 一、pcm 概述
