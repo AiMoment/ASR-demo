@@ -45,6 +45,7 @@ int KVP_Input_Real::open(QString &device)
 
 void KVP_Input_Real::readData()
 {
+//    qDebug() << "readData";
     //如果输入为空则返回空
     if (!audioInputSound) {
         qDebug() << "输入为空!";

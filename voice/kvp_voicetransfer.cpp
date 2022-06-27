@@ -14,8 +14,12 @@ KVP_VoiceTransfer::KVP_VoiceTransfer(QObject *parent) : QObject(parent)
 
 void KVP_VoiceTransfer::testStart()
 {
+    qDebug() << "testStart";
+
     enableTrans = true;
     aiEngine->enable();
+
+    qDebug() << "before startMic";
     inputReal->startMic();
 }
 
@@ -47,6 +51,7 @@ void KVP_VoiceTransfer::startReal()
 
 void KVP_VoiceTransfer::handleDataInput(QByteArray data, int len)
 {
+//    qDebug() << "handleDataInput";
     if (!enableTrans)
         return;
     // 获取到的音频数据进行拼接以满足 ai 接口需求

@@ -8,6 +8,7 @@ class WebSocketClientManager;
 #define AI_URL "ws://vop.baidu.com/realtime_asr?sn=63afbd67-22bb-4a26-b34b-69cda1de6a95"
 #endif
 
+
 struct result_t {
     int err_no;
     QString sn;

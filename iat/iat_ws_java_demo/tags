@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Cw	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static class Cw {$/;"	c	class:WebIATWS
+Data	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static class Data {$/;"	c	class:WebIATWS
+Decoder	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public Decoder() {$/;"	m	class:WebIATWS.Decoder
+Decoder	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static class Decoder {$/;"	c	class:WebIATWS
+FileUtil	src/com/iflytek/voicecloud/webapi/demo/util/FileUtil.java	/^public class FileUtil {$/;"	c
+HttpUtil	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil.java	/^public class HttpUtil {$/;"	c
+HttpUtil2	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil2.java	/^public class HttpUtil2 {$/;"	c
+ResponseData	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static class ResponseData {$/;"	c	class:WebIATWS
+Result	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static class Result {$/;"	c	class:WebIATWS
+StatusContinueFrame	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static final int StatusContinueFrame = 1;$/;"	f	class:WebIATWS
+StatusFirstFrame	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static final int StatusFirstFrame = 0;$/;"	f	class:WebIATWS
+StatusLastFrame	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static final int StatusLastFrame = 2;$/;"	f	class:WebIATWS
+Text	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static class Text {$/;"	c	class:WebIATWS
+WebIATWS	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^public class WebIATWS extends WebSocketListener {$/;"	c
+Ws	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static class Ws {$/;"	c	class:WebIATWS
+apiKey	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^	private static final String apiKey = "3127f74200187b000bde672967b4d4a4"; \/\/在控制台-我的应用-语音听写（流式版）获取$/;"	f	class:WebIATWS	file:
+apiSecret	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^	private static final String apiSecret = "NGU2NGY4YmVhYTg5NzE2ZjlkYzhiMDhk"; \/\/在控制台-我的应用-语音听写（流式版）获取$/;"	f	class:WebIATWS	file:
+appid	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^	private static final String appid = "898a0b0c"; \/\/在控制台-我的应用获取$/;"	f	class:WebIATWS	file:
+bg	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int bg;$/;"	f	class:WebIATWS.Result
+bg	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int bg;$/;"	f	class:WebIATWS.Text
+bg	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int bg;$/;"	f	class:WebIATWS.Ws
+code	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private int code;$/;"	f	class:WebIATWS.ResponseData	file:
+com.iflytek.voicecloud.webapi.demo	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^package com.iflytek.voicecloud.webapi.demo;$/;"	p
+com.iflytek.voicecloud.webapi.demo.util	src/com/iflytek/voicecloud/webapi/demo/util/FileUtil.java	/^package com.iflytek.voicecloud.webapi.demo.util;$/;"	p
+com.iflytek.voicecloud.webapi.demo.util	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil.java	/^package com.iflytek.voicecloud.webapi.demo.util;$/;"	p
+com.iflytek.voicecloud.webapi.demo.util	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil2.java	/^package com.iflytek.voicecloud.webapi.demo.util;$/;"	p
+cw	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        Cw[] cw;$/;"	f	class:WebIATWS.Ws
+data	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private Data data;$/;"	f	class:WebIATWS.ResponseData	file:
+dateBegin	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    private static Date dateBegin = new Date();$/;"	f	class:WebIATWS	file:
+dateEnd	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    private static Date dateEnd = new Date();$/;"	f	class:WebIATWS	file:
+decode	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public synchronized void decode(Text text) {$/;"	m	class:WebIATWS.Decoder
+decoder	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    Decoder decoder = new Decoder();$/;"	f	class:WebIATWS
+defc	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private int defc = 10;$/;"	f	class:WebIATWS.Decoder	file:
+deleted	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        boolean deleted;$/;"	f	class:WebIATWS.Text
+discard	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public void discard(){$/;"	m	class:WebIATWS.Decoder
+doPost1	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil.java	/^	public static String doPost1(String url, Map<String, String> header, String body) {$/;"	m	class:HttpUtil
+doPost1	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil2.java	/^	public static String doPost1(String url, Map<String, String> header, byte[] body) {$/;"	m	class:HttpUtil2
+doPost2	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil.java	/^	public static Map<String, Object> doPost2(String url, Map<String, String> header, String body) {$/;"	m	class:HttpUtil
+ed	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int ed;$/;"	f	class:WebIATWS.Result
+ed	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int ed;$/;"	f	class:WebIATWS.Text
+ed	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int ed;$/;"	f	class:WebIATWS.Ws
+file	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    private static final String file = "resource\\\\iat\\\\16k_10.pcm"; \/\/ 中文$/;"	f	class:WebIATWS	file:
+getAuthUrl	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static String getAuthUrl(String hostUrl, String apiKey, String apiSecret) throws Exception {$/;"	m	class:WebIATWS
+getCode	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public int getCode() {$/;"	m	class:WebIATWS.ResponseData
+getData	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public Data getData() {$/;"	m	class:WebIATWS.ResponseData
+getMessage	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public String getMessage() {$/;"	m	class:WebIATWS.ResponseData
+getResult	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public Result getResult() {$/;"	m	class:WebIATWS.Data
+getSid	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public String getSid() {$/;"	m	class:WebIATWS.ResponseData
+getStatus	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public int getStatus() {$/;"	m	class:WebIATWS.Data
+getText	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public Text getText() {$/;"	m	class:WebIATWS.Result
+hostUrl	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    private static final String hostUrl = "https:\/\/iat-api.xfyun.cn\/v2\/iat"; \/\/中英文，http url 不支持解析 ws\/wss schema$/;"	f	class:WebIATWS	file:
+inputStream2ByteArray	src/com/iflytek/voicecloud/webapi/demo/util/FileUtil.java	/^	static byte[] inputStream2ByteArray(InputStream in) throws IOException {$/;"	m	class:FileUtil
+json	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static final Gson json = new Gson();$/;"	f	class:WebIATWS
+ls	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        boolean ls;$/;"	f	class:WebIATWS.Result
+ls	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        boolean ls;$/;"	f	class:WebIATWS.Text
+main	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public static void main(String[] args) throws Exception {$/;"	m	class:WebIATWS
+message	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private String message;$/;"	f	class:WebIATWS.ResponseData	file:
+onFailure	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public void onFailure(WebSocket webSocket, Throwable t, Response response) {$/;"	m	class:WebIATWS
+onMessage	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public void onMessage(WebSocket webSocket, String text) {$/;"	m	class:WebIATWS
+onOpen	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    public void onOpen(WebSocket webSocket, Response response) {$/;"	m	class:WebIATWS
+pgs	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        String pgs;$/;"	f	class:WebIATWS.Result
+pgs	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        String pgs;$/;"	f	class:WebIATWS.Text
+read	src/com/iflytek/voicecloud/webapi/demo/util/FileUtil.java	/^	public static byte[] read(String filePath) throws IOException {$/;"	m	class:FileUtil
+resize	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public void resize() {$/;"	m	class:WebIATWS.Decoder
+result	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private Result result;$/;"	f	class:WebIATWS.Data	file:
+rg	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int[] rg;$/;"	f	class:WebIATWS.Result
+rg	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int[] rg;$/;"	f	class:WebIATWS.Text
+save	src/com/iflytek/voicecloud/webapi/demo/util/FileUtil.java	/^	public static void save(String filePath, String fileName, byte[] content) {$/;"	m	class:FileUtil
+sc	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int sc;$/;"	f	class:WebIATWS.Cw
+sdf	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyy-MM-dd HH:mm:ss.SSS");$/;"	f	class:WebIATWS	file:
+sid	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private String sid;$/;"	f	class:WebIATWS.ResponseData	file:
+sn	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int sn;$/;"	f	class:WebIATWS.Result
+sn	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        int sn;$/;"	f	class:WebIATWS.Text
+status	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private int status;$/;"	f	class:WebIATWS.Data	file:
+text	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        String text;$/;"	f	class:WebIATWS.Text
+texts	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        private Text[] texts;$/;"	f	class:WebIATWS.Decoder	file:
+toByteArray	src/com/iflytek/voicecloud/webapi/demo/util/HttpUtil.java	/^	private static byte[] toByteArray(InputStream in) throws IOException {$/;"	m	class:HttpUtil	file:
+toString	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public String toString() {$/;"	m	class:WebIATWS.Decoder
+toString	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        public String toString() {$/;"	m	class:WebIATWS.Text
+vad	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        JsonObject vad;$/;"	f	class:WebIATWS.Result
+vad	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        JsonObject vad;$/;"	f	class:WebIATWS.Text
+w	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        String w;$/;"	f	class:WebIATWS.Cw
+ws	src/com/iflytek/voicecloud/webapi/demo/WebIATWS.java	/^        Ws[] ws;$/;"	f	class:WebIATWS.Result

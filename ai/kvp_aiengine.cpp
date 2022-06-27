@@ -18,6 +18,7 @@ KVP_AIEngine::KVP_AIEngine(QObject *parent) : QObject(parent)
 
 int KVP_AIEngine::feedData(char *_data, int _size)
 {
+//    qDebug() << "feedData";
 //    emit translateOk("翻译好了");
     if (!m_isEnable)
         return -1;
@@ -28,6 +29,7 @@ int KVP_AIEngine::feedData(char *_data, int _size)
 
 void KVP_AIEngine::enable()
 {
+    qDebug() << "开始识别 before startDistinguish";
     wscm->startDistinguish();
     m_isEnable = true;
 }
@@ -43,8 +45,10 @@ void KVP_AIEngine::initWebSocket()
 {
     wscm = new WebSocketClientManager;
     connect(wscm, &WebSocketClientManager::signal_textMessageReceived, this, &KVP_AIEngine::slotWebSocketMessage);
-    QString url = AI_URL;
-    wscm->setUrl(url);
+    string url = wscm->get_url();
+//    QString url = AI_URL;
+    QString realurl = QString::fromStdString(url);
+    wscm->setUrl(realurl);
 }
 
 void KVP_AIEngine::slotWebSocketMessage(QString str)
@@ -59,3 +63,4 @@ void KVP_AIEngine::slotWebSocketMessage(QString str)
     }
 }
 #endif
+

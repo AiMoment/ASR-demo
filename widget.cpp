@@ -12,6 +12,7 @@ Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
 {
+    this->setFixedSize(QSize(400, 300));
     ui->setupUi(this);
     kv = new KVP_VoiceTransfer;
     connect(kv, &KVP_VoiceTransfer::translateOk, [this](QString res){
@@ -35,6 +36,7 @@ Widget::~Widget()
 
 void Widget::on_pushButton_clicked()
 {
+    qDebug() << "start button clicked";
     if (kv)
         kv->testStart();
 }
