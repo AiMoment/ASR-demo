@@ -1,4 +1,4 @@
-#include "kvp_aiengine.h"
+#include "aiengine.h"
 
 #include <QJsonObject>
 #include <QJsonDocument>
@@ -8,7 +8,7 @@
 #include "websocketclientmanager.h"
 #endif
 
-KVP_AIEngine::KVP_AIEngine(QObject *parent) : QObject(parent)
+AIEngine::AIEngine(QObject *parent) : QObject(parent)
 {
     m_isEnable = false;
 #ifdef WEBSOCKET_AI
@@ -16,10 +16,8 @@ KVP_AIEngine::KVP_AIEngine(QObject *parent) : QObject(parent)
 #endif
 }
 
-int KVP_AIEngine::feedData(char *_data, int _size)
+int AIEngine::feedData(char *_data, int _size)
 {
-//    qDebug() << "feedData";
-//    emit translateOk("翻译好了");
     if (!m_isEnable)
         return -1;
 #ifdef WEBSOCKET_AI
@@ -27,38 +25,45 @@ int KVP_AIEngine::feedData(char *_data, int _size)
 #endif
 }
 
-void KVP_AIEngine::enable()
+void AIEngine::enable()
 {
     qDebug() << "开始识别 before startDistinguish";
     wscm->startDistinguish();
     m_isEnable = true;
 }
 
-void KVP_AIEngine::disable()
+void AIEngine::disable()
 {
     wscm->endDistinguish();
     m_isEnable = false;
 }
 
 #ifdef WEBSOCKET_AI
-void KVP_AIEngine::initWebSocket()
+void AIEngine::initWebSocket()
 {
     wscm = new WebSocketClientManager;
-    connect(wscm, &WebSocketClientManager::signal_textMessageReceived, this, &KVP_AIEngine::slotWebSocketMessage);
-    string url = wscm->get_url();
-//    QString url = AI_URL;
+    connect(wscm, &WebSocketClientManager::textMessageReceivedSignal, this, &AIEngine::textMessageReceivedParseSlot);
+
+    string url = wscm->getAuthorizeUrl();
+
     QString realurl = QString::fromStdString(url);
+
     wscm->setUrl(realurl);
 }
 
-void KVP_AIEngine::slotWebSocketMessage(QString str)
+/**
+ * @brief AIEngine::textMessageReceivedParseSlot 解析从科大讯飞服务器获得的语音识别返回JSON数据
+ * @param str  从科大讯飞服务器获得的语音识别返回JSON数据
+ */
+void AIEngine::textMessageReceivedParseSlot(QString str)
 {
-    // 解析 json
     QJsonDocument json = QJsonDocument::fromJson(str.toLocal8Bit().data());
 
-    if (json["type"] == "FIN_TEXT") {
-        QString result = json["result"].toString();
-        qDebug() << result;
+    if (json["code"] == 0) {
+        QString result = json["data"].toString();
+
+        qDebug() << "开始解析JSON数据： " << result;
+
         emit translateOk(result);
     }
 }

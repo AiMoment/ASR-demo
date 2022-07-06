@@ -2,7 +2,7 @@
 
 #include <QDebug>
 
-#include "ai/kvp_aiengine.h"
+#include "ai/aiengine.h"
 #include "input/kvp_input_real.h"
 
 KVP_VoiceTransfer::KVP_VoiceTransfer(QObject *parent) : QObject(parent)
@@ -33,9 +33,11 @@ void KVP_VoiceTransfer::testEnd()
 
 void KVP_VoiceTransfer::initAIEngine()
 {
-    if (!aiEngine)
-        aiEngine = new KVP_AIEngine;
-    connect(aiEngine, &KVP_AIEngine::translateOk, this, &KVP_VoiceTransfer::handleAItranslateData);
+    if (!aiEngine) {
+        aiEngine = new AIEngine;
+    }
+
+    connect(aiEngine, &AIEngine::translateOk, this, &KVP_VoiceTransfer::handleAItranslateData);
 }
 
 void KVP_VoiceTransfer::initInput()

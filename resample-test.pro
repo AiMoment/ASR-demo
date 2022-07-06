@@ -19,8 +19,8 @@ DEFINES += WEBSOCKET_AI
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ai/aiengine.cpp \
     ai/iflytek_utils.cpp \
-    ai/kvp_aiengine.cpp \
     ai/websocketclientmanager.cpp \
     dbus/kvp_dbusadapter.cpp \
     input/kvp_input.cpp \
@@ -35,8 +35,8 @@ SOURCES += \
     widget.cpp
 
 HEADERS += \
+    ai/aiengine.h \
     ai/iflytek_utils.h \
-    ai/kvp_aiengine.h \
     ai/websocketclientmanager.h \
     dbus/kvp_dbusadapter.h \
     input/kvp_input.h \

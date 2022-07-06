@@ -5,7 +5,6 @@
 
 #ifdef WEBSOCKET_AI
 class WebSocketClientManager;
-#define AI_URL "ws://vop.baidu.com/realtime_asr?sn=63afbd67-22bb-4a26-b34b-69cda1de6a95"
 #endif
 
 
@@ -20,11 +19,12 @@ struct result_t {
     uint64_t end_time;
 };
 
-class KVP_AIEngine : public QObject
+class AIEngine : public QObject
 {
     Q_OBJECT
+
 public:
-    explicit KVP_AIEngine(QObject *parent = nullptr);
+    explicit AIEngine(QObject *parent = nullptr);
 
     // 喂数据给它，处理后通过信号返回
     int feedData(char *_data, int _size);
@@ -35,10 +35,12 @@ public:
 signals:
     // 文字翻译
     void translateOk(QString);
+
     // 语法分析结构，目前只是主谓宾
     void analysisOk(QString, QString, QString);
 
 private:
+
 #ifdef WEBSOCKET_AI
     WebSocketClientManager *wscm;
 
@@ -46,9 +48,10 @@ private:
 
     bool m_isEnable;
 
-private slots:
-    void slotWebSocketMessage(QString str);
+public slots:
+    void textMessageReceivedParseSlot(QString str);
 #endif
+
 };
 
 #endif // KVP_AIENGINE_H

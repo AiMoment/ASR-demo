@@ -5,7 +5,7 @@
 
 #define MAX_DATASIZE 8192
 
-class KVP_AIEngine;
+class AIEngine;
 class KVP_Input_Real;
 
 class KVP_VoiceTransfer : public QObject
@@ -32,7 +32,7 @@ private:
     bool enableTrans;
     int dataLen = 0;
     char audioData[MAX_DATASIZE];
-    KVP_AIEngine *aiEngine = nullptr;
+    AIEngine *aiEngine = nullptr;
     KVP_Input_Real *inputReal = nullptr;
 
     void sendData2AI();

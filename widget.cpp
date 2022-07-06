@@ -1,10 +1,9 @@
 #include "widget.h"
 #include "ui_widget.h"
-
-#include <QDebug>
-
 #include "voice/kvp_voicetransfer.h"
 #include "kvp_actions.h"
+
+#include <QDebug>
 
 static KVP_VoiceTransfer *kv = nullptr;
 
@@ -14,13 +13,16 @@ Widget::Widget(QWidget *parent)
 {
     this->setFixedSize(QSize(400, 300));
     ui->setupUi(this);
+
     kv = new KVP_VoiceTransfer;
+
     connect(kv, &KVP_VoiceTransfer::translateOk, [this](QString res){
         if (res.startsWith("打开")) {
             KVP_Actions ka;
             res.chop(1);
             res.remove(0, 2);
-            qDebug() << res;
+            qDebug() << "应用名称： " << res;
+
             QString z = "";
             QString act = "打开";
             ka.execAction(z, act, res);
@@ -36,13 +38,14 @@ Widget::~Widget()
 
 void Widget::on_pushButton_clicked()
 {
-    qDebug() << "start button clicked";
-    if (kv)
+    if (kv) {
         kv->testStart();
+    }
 }
 
 void Widget::on_pushButton_2_clicked()
 {
-    if (kv)
+    if (kv) {
         kv->testEnd();
+    }
 }

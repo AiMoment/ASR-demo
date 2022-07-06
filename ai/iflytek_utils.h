@@ -36,7 +36,7 @@ std::string get_base64_decode(const std::string &data);
  * @param url 待编码的url
  * @return 被编码转义后的url
  */
-std::string get_url_encode(const std::string &url);
+std::string getm_authorizeUrl_encode(const std::string &url);
 
 /**
  * @brief 延迟函数，Windows和Linux下的延迟函数各异
