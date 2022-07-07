@@ -19,9 +19,12 @@ extern "C" {
 #include <iostream>
 using namespace::std;
 
+//#include <ukui-log4qt.h>
 
 int main(int argc, char *argv[])
 {
+//    initUkuiLog4qt("asr-demo");
+
     QApplication a(argc, argv);
 
     Widget w;

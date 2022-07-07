@@ -17,9 +17,11 @@ Widget::Widget(QWidget *parent)
     kv = new KVP_VoiceTransfer;
 
     connect(kv, &KVP_VoiceTransfer::translateOk, [this](QString res){
+        qDebug() << "识别结果： " << res;
+
         if (res.startsWith("打开")) {
             KVP_Actions ka;
-            res.chop(1);
+//            res.chop(1);
             res.remove(0, 2);
             qDebug() << "应用名称： " << res;
 

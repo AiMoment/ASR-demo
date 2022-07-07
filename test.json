@@ -1,0 +1,87 @@
+{
+    "Name": "Ace",
+    "Sex": "man",
+    "Age": 20,
+    "Family": {
+        "Father": "Gol.D.Roger",
+        "Mother": "Portagas.D.Rouge",
+        "Brother": [
+            "Sabo",
+            "Monkey D. Luffy"
+        ]
+    },
+    "IsAlive": false,
+    "Comment": "yyds"
+}
+
+{
+    "code":0,
+    "data":{
+        "result":{
+            "bg":0,
+            "ed":0,
+            "ls":false,
+            "sn":1,
+            "ws":[
+                {
+                    "bg":78,
+                    "cw":[
+                        {
+                            "sc":0,
+                            "w":"打"
+                        }
+                    ]
+                },
+                {
+                    "bg":102,
+                    "cw":[
+                        {
+                            "sc":0,
+                            "w":"电话"
+                        }
+                    ]
+                },
+                {
+                    "bg":130,
+                    "cw":[
+                        {
+                            "sc":0,
+                            "w":"给"
+                        }
+                    ]
+                },
+                {
+                    "bg":150,
+                    "cw":[
+                        {
+                            "sc":0,
+                            "w":"梁"
+                        }
+                    ]
+                },
+                {
+                    "bg":174,
+                    "cw":[
+                        {
+                            "sc":0,
+                            "w":"玉"
+                        }
+                    ]
+                },
+                {
+                    "bg":186,
+                    "cw":[
+                        {
+                            "sc":0,
+                            "w":"生"
+
+                        }
+                    ]
+                }
+            ]
+        },
+        "status":0
+    },
+    "message":"success",
+    "sid":"iat000ea5ad@dx181d69c1e2c6f29802"
+}
