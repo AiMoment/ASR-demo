@@ -1,0 +1,17 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+STATUS_CONTINUE_FRAME	iat_ws_python3.py	/^STATUS_CONTINUE_FRAME = 1  # 中间帧标识$/;"	v
+STATUS_FIRST_FRAME	iat_ws_python3.py	/^STATUS_FIRST_FRAME = 0  # 第一帧的标识$/;"	v
+STATUS_LAST_FRAME	iat_ws_python3.py	/^STATUS_LAST_FRAME = 2  # 最后一帧的标识$/;"	v
+Ws_Param	iat_ws_python3.py	/^class Ws_Param(object):$/;"	c
+__init__	iat_ws_python3.py	/^    def __init__(self, APPID, APIKey, APISecret, AudioFile):$/;"	m	class:Ws_Param
+create_url	iat_ws_python3.py	/^    def create_url(self):$/;"	m	class:Ws_Param
+on_close	iat_ws_python3.py	/^def on_close(ws):$/;"	f
+on_error	iat_ws_python3.py	/^def on_error(ws, error):$/;"	f
+on_message	iat_ws_python3.py	/^def on_message(ws, message):$/;"	f
+on_open	iat_ws_python3.py	/^def on_open(ws):$/;"	f
+run	iat_ws_python3.py	/^    def run(*args):$/;"	f	function:on_open

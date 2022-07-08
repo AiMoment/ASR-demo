@@ -1,0 +1,3 @@
+[submodule "xfyun-webapi"]
+	path = xfyun-webapi
+	url = git@github.com:Franklin-Qi/xfyun-webapi.git
