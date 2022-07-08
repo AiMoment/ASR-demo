@@ -24,8 +24,11 @@ using namespace::std;
 int main(int argc, char *argv[])
 {
 //    initUkuiLog4qt("asr-demo");
+    qSetMessagePattern("[ %{file}: %{line} ] %{message}");
 
     QApplication a(argc, argv);
+    a.setOrganizationName("Kylin");
+    a.setApplicationName("asr-demo");
 
     Widget w;
     w.show();
