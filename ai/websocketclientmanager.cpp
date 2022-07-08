@@ -8,10 +8,12 @@
 #include <QJsonDocument>
 
 #include <time.h>
+#include <pthread.h>
 
 const int g_frameSize = 1280; //每一帧音频大小的整数倍，每次发送音频字节数1280B
 const int g_intervel = 40; // 未压缩的PCM格式，每次发送音频间隔40ms
 
+pthread_mutex_t popMutex;
 
 WebSocketClientManager::WebSocketClientManager(QObject *parent)
     : QObject(parent),
@@ -121,12 +123,15 @@ void WebSocketClientManager::connectedSlot()
             while (m_isEnabled) {
                 QThread::msleep(g_intervel);
 
+                pthread_mutex_lock(&popMutex);
+
                 if (m_audioDataQueue.size() > 0) {
                     QByteArray bya = m_audioDataQueue.front();
                     m_audioDataQueue.pop_front();
                     QString sendText = makeContinueFrameText(bya);
                     sendContinueFrameAudioDataSignal(sendText);
                 }
+                pthread_mutex_unlock(&popMutex);
             }
         })->start();
     }
@@ -322,12 +327,15 @@ void WebSocketClientManager::startDistinguish()
             while (m_isEnabled) {
                 QThread::msleep(g_intervel);
 
+                pthread_mutex_lock(&popMutex);
+
                 if (m_audioDataQueue.size() > 0) {
                     QByteArray bya = m_audioDataQueue.front();
                     m_audioDataQueue.pop_front();
                     QString sendText = makeContinueFrameText(bya);
                     sendContinueFrameAudioDataSignal(sendText);
                 }
+                pthread_mutex_unlock(&popMutex);
             }
         })->start();
     }

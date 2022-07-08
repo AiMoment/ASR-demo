@@ -28,7 +28,7 @@ public:
     int open(QString& device);
 
 signals:
-    void packetReady(QByteArray, int);
+    void audioDataPackReadySignal(QByteArray, int); // 发送麦克风语音数据
 
 private slots:
     void readData();

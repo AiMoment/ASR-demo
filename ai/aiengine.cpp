@@ -242,17 +242,8 @@ void AIEngine::textMessageReceivedParseSlot(QString str)
     }
 
     qDebug() << "resultText: " << resultText;
-    emit translateOk(resultText);
+    emit parsetextMessageResultSignal(resultText);
 
-#if 0
-    if (document["code"] == 0) {
-        QString result = document["data"].toString();
-
-        qDebug() << "开始解析document的data： " << result;
-
-        emit translateOk(result);
-    }
-#endif
 }
 #endif
 

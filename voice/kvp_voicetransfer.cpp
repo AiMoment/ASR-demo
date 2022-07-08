@@ -37,13 +37,13 @@ void KVP_VoiceTransfer::initAIEngine()
         aiEngine = new AIEngine;
     }
 
-    connect(aiEngine, &AIEngine::translateOk, this, &KVP_VoiceTransfer::handleAItranslateData);
+    connect(aiEngine, &AIEngine::parsetextMessageResultSignal, this, &KVP_VoiceTransfer::handleAItranslateData);
 }
 
 void KVP_VoiceTransfer::initInput()
 {
     inputReal = new KVP_Input_Real;
-    connect(inputReal, &KVP_Input_Real::packetReady, this, &KVP_VoiceTransfer::handleDataInput);
+    connect(inputReal, &KVP_Input_Real::audioDataPackReadySignal, this, &KVP_VoiceTransfer::handleDataInput);
 }
 
 void KVP_VoiceTransfer::startReal()
@@ -53,7 +53,6 @@ void KVP_VoiceTransfer::startReal()
 
 void KVP_VoiceTransfer::handleDataInput(QByteArray data, int len)
 {
-//    qDebug() << "handleDataInput";
     if (!enableTrans)
         return;
     // 获取到的音频数据进行拼接以满足 ai 接口需求

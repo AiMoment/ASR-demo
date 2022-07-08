@@ -34,7 +34,7 @@ public:
 
 signals:
     // 文字翻译
-    void translateOk(QString);
+    void parsetextMessageResultSignal(QString);
 
     // 语法分析结构，目前只是主谓宾
     void analysisOk(QString, QString, QString);

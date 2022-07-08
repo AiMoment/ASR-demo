@@ -29,6 +29,16 @@ Widget::Widget(QWidget *parent)
             QString act = "打开";
             ka.execAction(z, act, res);
         }
+        if (res.startsWith("播放") || res.startsWith("音乐")) {
+            KVP_Actions ka;
+//            res.chop(1);
+            res.remove(0, 2);
+            qDebug() << "应用名称： " << res;
+
+            QString z = "";
+            QString act = "播放";
+            ka.execAction(z, act, res);
+        }
     });
 }
 

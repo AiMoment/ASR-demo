@@ -69,6 +69,7 @@ static void closeFunc(std::string _s)
 KVP_Actions::KVP_Actions()
 {
     actMap["打开"] = openFunc;
+    actMap["播放"] = openFunc;
     actMap["关闭"] = closeFunc;
 }
 

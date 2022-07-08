@@ -65,5 +65,5 @@ void KVP_Input_Real::readData()
         return;
     }
 
-    emit packetReady(recordBuffer, l);
+    emit audioDataPackReadySignal(recordBuffer, l);
 }

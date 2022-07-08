@@ -1,5 +1,8 @@
 {{"视频播放器", "影音"}, "kylin-video"},
 {{"音乐播放器", "音乐"}, "kylin-music"},
+{{"音乐暂停", "暂停"}, "kylin-music -p"},
+{{"音乐播放", "播放"}, "kylin-music -s"},
+{{"麒麟扫描", "扫描"}, "kylin-scanner"},
 {{"刻录"}, "kylin-burner"},
 {{"打印机"}, "kylin-printer"},
 {{"天气"}, "kylin-weather"},
